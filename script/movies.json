@@ -1,0 +1,64 @@
+var movies = `
+	[
+		{
+			"title":"The Dark Knight",
+			"year":"2008",
+			"genre":"Crime",
+			"starring":"Christian Bale, Cillian Murphy, Heath Ledger, William Fichtner",
+			"description":"Batman's struggle against The Joker becomes deeply personal, forcing him to 'confront everything he believes'...",
+			"fullDescription":"Set within a year after the events of Batman Begins (2005), Batman, Lieutenant James Gordon, and new District Attorney Harvey Dent successfully begin to round up the criminals that plague Gotham City, until a mysterious and sadistic criminal mastermind known only as 'The Joker' appears in Gotham, creating a new wave of chaos. Batman's struggle against The Joker becomes deeply personal, forcing him to 'confront everything he believes' and improve his technology to stop him. A love triangle develops between Bruce Wayne, Dent, and Rachel Dawes.",
+			"img":"img/batman.jpg",
+			"likes":0
+		},
+		{
+			"title":"Interstellar",
+			"year":"2014",
+			"genre":"Sci-fi",
+			"starring":"Jessica Chastain, Matthew McConaughey, Anne Hathaway, Matt Damon",
+			"description":"Earth's future has been riddled by disasters, famines, and droughts. There is only one way to ensure mankind's survival...",
+			"fullDescription":"Earth's future has been riddled by disasters, famines, and droughts. There is only one way to ensure mankind's survival: Interstellar travel. A newly discovered wormhole in the far reaches of our solar system allows a team of astronauts to go where no man has gone before, a planet that may have the right environment to sustain human life.",
+			"img":"img/interstellar.jpg",
+			"likes":5
+		},
+		{
+			"title":"Minority Report",
+			"year":"2002",
+			"genre":"Sci-fi",
+			"starring":"Tom Cruise, Colin Farrell, Cameron Diaz, Frank Grillo",
+			"description":"In the year 2054 A.D. crime is virtually eliminated from Washington D.C. thanks to an elite law enforcing squad 'Precrime'...",
+			"fullDescription":"In the year 2054 A.D. crime is virtually eliminated from Washington D.C. thanks to an elite law enforcing squad 'Precrime'. They use three gifted humans (called 'Pre-Cogs') with special powers to see into the future and predict crimes beforehand. John Anderton heads Precrime and believes the system's flawlessness steadfastly. However one day the Pre-Cogs predict that Anderton will commit a murder himself in the next 36 hours. Worse, Anderton doesn't even know the victim. He decides to get to the mystery's core by finding out the 'minority report' which means the prediction of the female Pre-Cog Agatha that 'might' tell a different story and prove Anderton innocent.",
+			"img": "img/report.jpg",
+			"likes":3
+		},
+		{
+			"title":"Skyfall",
+			"year":"2012",
+			"genre":"Action",
+			"starring":"Daniel Craig, Ralph Fiennes, Ben Whishaw, Bérénice Marlohe",
+			"description":"When James Bond's latest assignment goes gravely wrong and Agents around the world are exposed...",
+			"fullDescription":"When James Bond's (Daniel Craig's) latest assignment goes gravely wrong and Agents around the world are exposed, MI6 is attacked, forcing (M Dame Judi Dench) to relocate the agency. These events cause her authority and position to be challenged by Gareth Mallory (Ralph Fiennes), the new Chairman of the Intelligence and Security Committee. With MI6 now compromised from both inside and out, M is left with one ally she can trust: Bond. 007 takes to the shadows, aided only by field agent, Miss Eve Moneypenny (Naomie Harris), following a trail to the mysterious Tiago Rodriguez, a.k.a. Raoul Silva (Javier Bardem), whose lethal and hidden motives have yet to reveal themselves.",
+			"img":"img/skyfall.jpg",
+			"likes":7
+		},
+		{
+			"title":"Terminator 2",
+			"year":"1991",
+			"genre":"Sci-fi Action",
+			"starring":"Arnold Schwarzenegger, Linda Hamilton, Robert Patrick, James Cameron",
+			"description":"Over 10 years have passed since the first machine called The Terminator tried to kill Sarah Connor...",
+			"fullDescription":"Over 10 years have passed since the first machine called The Terminator tried to kill Sarah Connor and her unborn son, John. The man who will become the future leader of the human resistance against the Machines is now a healthy young boy. However, another Terminator, called the T-1000, is sent back through time by the supercomputer Skynet. This new Terminator is more advanced and more powerful than its predecessor and its mission is to kill John Connor when he's still a child. However, in the Internet and John do not have to face the threat of the T-1000 alone. Another Terminator (identical to the same model that tried and failed to kill Sarah Connor in 1984) is also sent back through time to protect them. Now, the battle for tomorrow has begun.",
+			"img":"img/terminator.jpg",
+			"likes":12
+		},
+		{
+			"title":"Dumb and Dumber",
+			"year":"1994",
+			"genre":"Comedy",
+			"starring":"Jim Carrey, Lauren Holly, Jeff Daniels, Teri Garr",
+			"description":"Harry and Lloyd are two good friends who happen to be really stupid. The duo set out on a cross country trip...",
+			"fullDescription":"Harry and Lloyd are two good friends who happen to be really stupid. The duo set out on a cross country trip from Providence to Aspen, Colorado to return a briefcase full of money to its rightful owner, a beautiful woman named Mary Swanson. After a trip of one mishap after another, the duo eventually make it to Aspen. But the two soon realize that Mary and her briefcase are the least of their problems.",
+			"img":"img/dumb.jpg",
+			"likes":10
+		}
+	]
+`
