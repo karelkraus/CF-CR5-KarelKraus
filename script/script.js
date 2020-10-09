@@ -34,7 +34,7 @@ for (i=0; i <data.length; i++) {
 							       	${data[i].fullDescription}
 							      </div>
 							      <div class="modal-footer">
-							        <button type="button" class="btn btn-secondary" data-dismiss="modal">Watch trailer</button>
+							        <button type="button" class="btn btn-secondary">Watch trailer</button>
 							        <button type="button" class="btn btn-primary">Download movie</button>
 							      </div>
 							    </div>
@@ -56,9 +56,14 @@ $(document).ready(function(){
 		var index = $(this).parent().attr("id");
 		data[index].likes +=1;
 		$(this).parent().find(".addOne").html(data[index].likes);
+		$(this).parent().find(".addOne").removeAttr("data-likes");
+		$(this).parent().find(".addOne").attr("data-likes",data[index].likes);
 		$(this).hide();
+		$(this).parent().css({"color":"green","font-weight":"bold"})
 	})
 })
+
+
 
 $(document).on("change", ".sorting", function() {
   var sortingMethod = $(this).val();
@@ -74,7 +79,7 @@ function sortMoviesMostLikes() {
   var sortMovies = $('.someMovie');
 
   sortMovies.sort(function(a, b) {
-    return $('.addOne', b).data("likes") - $('.addOne', a).data("likes");
+    return $('.addOne', b).attr("data-likes") - $('.addOne', a).attr("data-likes");
   });
 
   $(".movies").append(sortMovies);
@@ -84,7 +89,7 @@ function sortMoviesFewerLikes() {
   var sortMovies = $('.someMovie');
 
   sortMovies.sort(function(a, b) {
-    return $('.addOne', a).data("likes") - $('.addOne', b).data("likes");
+    return $('.addOne', a).attr("data-likes") - $('.addOne', b).attr("data-likes");
   });
 
   $(".movies").append(sortMovies);
