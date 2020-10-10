@@ -3,7 +3,7 @@ var data = JSON.parse(movies)
 for (i=0; i <data.length; i++) {
 	$(".movies").append(`
 		<div class="col-6 someMovie">
-			<div class="card text-white bg-dark mb-3" style="max-width: 540px;">
+			<div class="card text-white bg-dark mb-3 movieCards" style="max-width: 540px;">
 	  			<div class="row no-gutters">
 	    			<div class="col-md-4 p-2">
 	      				<img src=${data[i].img} title="More info" class="card-img" class="btn btn-primary" data-toggle="modal" data-target="#information${i}">
@@ -21,7 +21,7 @@ for (i=0; i <data.length; i++) {
 	        				
 							<div class="modal fade" id="information${i}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 							  <div class="modal-dialog modal-dialog-centered">
-							    <div class="modal-content bg-dark">
+							    <div class="modal-content bg-dark movieCardsExtra">
 							      <div class="modal-header">
 							        <h5 class="modal-title" id="exampleModalLabel">${data[i].title} (${data[i].year})</h5>
 							        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -51,6 +51,7 @@ for (i=0; i <data.length; i++) {
 
 $(document).ready(function(){
 	$(".card-img").css("cursor", "pointer")
+	$("#lightBulb").css("cursor", "pointer")
 	$(".thumbsUp").css("cursor", "pointer")
 	$(".thumbsUp").on("click", function(){
 		var index = $(this).parent().attr("id");
@@ -60,7 +61,13 @@ $(document).ready(function(){
 		$(this).parent().find(".addOne").attr("data-likes",data[index].likes);
 		$(this).hide();
 		$(this).parent().css({"color":"green","font-weight":"bold"})
-	})
+	});
+	$("#lightBulb").click(function(){
+		$("body").toggleClass("bg-transparent")
+		$("#movieTitle").toggleClass("text-light text-dark")
+		$(".movieCards").toggleClass("text-white bg-dark text-dark bg-light")
+		$(".movieCardsExtra").toggleClass("bg-dark bg-light")
+	});
 })
 
 
